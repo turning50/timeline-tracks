@@ -4,7 +4,32 @@ Play now: [Timeline Tracks](https://turning50.github.io/timeline-tracks/) · [Gi
 
 A mobile-first music timeline party game for 2–6 people, built with React, TypeScript and Vite. No backend, database, paid service, or game account is required.
 
-## Play
+## Game modes
+
+Choose a mode on the home screen. Every mode uses the same listening, QR, lock, reveal and next-turn controls.
+
+| Mode                          | Rules                                     | Finish                              | Hints                                    | Theme / pack                                     |
+| ----------------------------- | ----------------------------------------- | ----------------------------------- | ---------------------------------------- | ------------------------------------------------ |
+| Klassikko (Classic)           | Place on your full timeline               | 5, 7 or 10 cards, including starter | None                                     | Original navy/gold; original 37 tracks unchanged |
+| Junior · Helppo (Easy)        | Older or newer than your last earned card | 5 correct answers, plus starter     | Two optional clues per track             | Violet/mint; 46-track Junior pack                |
+| Junior · Haastava (Challenge) | Place on your full timeline               | 7 correct answers, plus starter     | Two hints per player for the entire game | Violet/mint; 46-track Junior pack                |
+| Perhe (Family)                | Classic rules for mixed-age play          | 5, 7 or 10 cards, including starter | None                                     | Warm cream/terracotta; Junior/Family pack        |
+
+Wrong answers never remove earned cards. Equal years are accepted on either side in every mode. Easy mode compares against the last **correctly earned** card (initially the starter), while collected cards remain sorted; a wrong guess does not change the comparison card. Hints show the decade, then a five-year range; they never show the exact answer, artist or title. Hint budgets and the chosen answer survive reloads.
+
+Junior’s starter gives context but no point. Both Junior difficulties count actual correct answers. The 46-track pack supports a six-player challenge game with all correct guesses; wrong guesses can still exhaust it. The existing highest-score/tie finish applies when no unused tracks remain.
+
+The themes use accessible text/button contrast, generous touch controls and the familiar vertical layout. Junior/Family reveal animations are disabled by `prefers-reduced-motion`; Classic retains its v1.0.0 palette. Saved original v1 games continue as Classic with their original score rules.
+
+### Junior / Family songs
+
+Edit `src/data/junior-songs.json` independently of `src/data/songs.json`. The Junior pack blends film songs (Frozen, Moana, Encanto, The Lego Movie), pop (BTS, One Direction, Katy Perry) and some older recognisable classics. It is an editorial selection for ages 8–14, not an official age rating. Some mainstream songs include mild romance, adversity or figurative language. Parents can adapt the pack to their preferences; Spotify recommendations/ads are outside the game. See `SONG_SOURCES.md` for all verified track links and recording-year notes. Shared song IDs must describe the same recording in both packs.
+
+### Version history
+
+The working original version is preserved as [`v1.0.0`](https://github.com/turning50/timeline-tracks/releases/tag/v1.0.0), commit `a764505fa8d7f7824149c1d9bb3f4297a62fda11`. Junior/Family changes are developed on `feature/junior`, validated there and on pull requests, then merged into `main` for Pages publication. Only `main` deploys; feature/PR runs only validate.
+
+## Classic play
 
 1. Start a game, name 2–6 players and choose 5, 7 (default) or 10 cards.
 2. Each player gets one revealed starting card, which counts toward the finish line.
@@ -103,7 +128,7 @@ The engine accepts a song collection, so future decade/genre/country/custom-pack
 - Spotify may ask for an account, show ads, restrict playback or vary availability by region/device/subscription. The OS decides whether a link opens the app or web player.
 - Song identity is hidden in the game UI until reveal, but is visible on Spotify and present in the downloaded static JSON. This is a friendly party game, not an anti-cheat system.
 - One shared game phone, turn-based local multiplayer; no remote synchronization.
-- One starter pack, no imports or filters yet. A small pack can exhaust before the chosen target.
+- Two curated packs; no custom imports or filters yet. A small pack can exhaust before the chosen target.
 - A save is local to this browser and origin; no cloud backup.
 - QR generation runs locally; listening itself is not bundled or cached.
 - English interface. Real-device Safari, Home Screen installation and scanning with another phone remain device acceptance checks.

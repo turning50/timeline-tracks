@@ -43,3 +43,39 @@ Checked against retrieved public Spotify track pages/embed listings on 2026-10-0
 | The Rolling Stones                          | Paint It, Black                            | 1966          | [Spotify](https://open.spotify.com/track/63T7DJ1AFDD6Bn8VzG6JE8) |
 
 Take on Me uses the specifically identified 1985 single mix, rather than the earlier 1984 recording. For the other recordings, an earlier commercial album release counts (for example Billie Jean: Thriller, 1982). Review any new recording against its original release history before adding it.
+
+## Junior / Family pack (2026-10-04)
+
+46 recordings: familiar pop, upbeat rock, film songs and a smaller set of recognisable classics. Selected for a mixed 8–14 audience, avoiding the adult-oriented tracks in the original pack (e.g. Despacito, bad guy, Get Lucky and Welcome to the Jungle). This is an editorial selection, not an official age rating. No explicit-tagged variant was intentionally selected. Mild romance, adversity and figurative language remain in mainstream songs. Families can adapt this JSON pack to their preferences. Spotify suggestions and ads are outside the game.
+
+The original 19 reused recordings retain the URLs/years above. The 27 additions below were found on public Spotify track/embed pages, rather than generated IDs. All years are first releases of these recordings, not compilation dates. Shake It Off uses the original 2014 recording, not Taylor’s Version (2023). Happy first appeared in 2013; Count on Me first appeared on the 2010 album. The 1988 Bobby McFerrin soundtrack version and 1977 Bob Marley recording are used.
+
+| Artist                                                                                    | Track                            | First release | Verified Spotify page                                 |
+| ----------------------------------------------------------------------------------------- | -------------------------------- | ------------: | ----------------------------------------------------- |
+| Idina Menzel                                                                              | Let It Go                        |          2013 | https://open.spotify.com/track/0qcr5FMsEO85NAQjrlDRKo |
+| Shakira                                                                                   | Try Everything                   |          2016 | https://open.spotify.com/track/6oqRo9HGck5jRuJqYIPBIJ |
+| Justin Timberlake                                                                         | CAN’T STOP THE FEELING!          |          2016 | https://open.spotify.com/track/6JV2JOEocMgcZxYSZelKcc |
+| Dwayne Johnson                                                                            | You’re Welcome                   |          2016 | https://open.spotify.com/track/458kLXpVNXB4Jno0kKTtK2 |
+| Carolina Gaitán, Mauro Castillo, Adassa, Rhenzy Feliz, Diane Guerrero & Stephanie Beatriz | We Don’t Talk About Bruno        |          2021 | https://open.spotify.com/track/52xJxFP6TqMuO4Yt0eOkMz |
+| Pharrell Williams                                                                         | Happy                            |          2013 | https://open.spotify.com/track/60nZcImufyMA1MKQY3dcCH |
+| Taylor Swift                                                                              | Shake It Off                     |          2014 | https://open.spotify.com/track/0cqRj7pUJDkTCEsJkx8snD |
+| Katy Perry                                                                                | Roar                             |          2013 | https://open.spotify.com/track/27tNWlhdAryQY04Gb2ZhUI |
+| Katy Perry                                                                                | Firework                         |          2010 | https://open.spotify.com/track/3nMzQZiz8orlSV3PxYwnVP |
+| Imagine Dragons                                                                           | Believer                         |          2017 | https://open.spotify.com/track/6Oel3GPo8dSzdnoDX0MzSW |
+| Imagine Dragons                                                                           | Thunder                          |          2017 | https://open.spotify.com/track/1zB4vmk8tFRmM9UULNzbLB |
+| BTS                                                                                       | Dynamite                         |          2020 | https://open.spotify.com/track/5QDLhrAOJJdNAmCTJ8xMyW |
+| BTS                                                                                       | Butter                           |          2021 | https://open.spotify.com/track/3VqeTFIvhxu3DIe4eZVzGq |
+| One Direction                                                                             | What Makes You Beautiful         |          2011 | https://open.spotify.com/track/4cluDES4hQEUhmXj6TXkSo |
+| Bruno Mars                                                                                | Count on Me                      |          2010 | https://open.spotify.com/track/3T924DFj4oJQdUKP7CYsCH |
+| Imagine Dragons                                                                           | On Top of the World              |          2012 | https://open.spotify.com/track/213x4gsFDm04hSqIUkg88w |
+| Coldplay                                                                                  | A Sky Full of Stars              |          2014 | https://open.spotify.com/track/4z3mFGACK05j0fG785TajY |
+| Avicii                                                                                    | Wake Me Up                       |          2013 | https://open.spotify.com/track/0UgLHf4WheJhiTIgixmZ01 |
+| Tones and I                                                                               | Dance Monkey                     |          2019 | https://open.spotify.com/track/4AsT0m4FFfNAte32fZxXra |
+| Coldplay                                                                                  | Viva La Vida                     |          2008 | https://open.spotify.com/track/2LnmFzNEQ2N79WVCWQzKwz |
+| OneRepublic                                                                               | Counting Stars                   |          2013 | https://open.spotify.com/track/5STH9TsXknw7YiF2Cw8qDx |
+| Shakira & Freshlyground                                                                   | Waka Waka (This Time for Africa) |          2010 | https://open.spotify.com/track/4aCYzKZ331yJIRqvEUtF3Q |
+| The Script feat. will.i.am                                                                | Hall of Fame                     |          2012 | https://open.spotify.com/track/48c0n7LYAiHETfDoXxVcLP |
+| Ziv Zaifman, Hugh Jackman & Michelle Williams                                             | A Million Dreams                 |          2017 | https://open.spotify.com/track/11DnDeWTQuv3GIH0XHT2pl |
+| Tegan and Sara feat. The Lonely Island                                                    | Everything Is Awesome!!!         |          2014 | https://open.spotify.com/track/65DU3ad0BY3N1TNn58ofmK |
+| Bob Marley & The Wailers                                                                  | Three Little Birds               |          1977 | https://open.spotify.com/track/7vggqxNKwd6xdRoYS0pQtM |
+| Bobby McFerrin                                                                            | Don’t Worry, Be Happy            |          1988 | https://open.spotify.com/track/1ngmt8WTzBqGjsE7Ks9FMO |
