@@ -1,5 +1,5 @@
 /* Network-first updates, with a local app-shell fallback. Spotify is never cached. */
-const CACHE = "timeline-tracks-v1";
+const CACHE = "timeline-tracks-v1-1";
 const ROOT = new URL("./", self.location).href;
 self.addEventListener("install", (event) => {
   event.waitUntil(
