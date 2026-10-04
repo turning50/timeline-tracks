@@ -13,7 +13,7 @@ async function state(page: Page): Promise<Game> {
 async function setup(
   page: Page,
   mode = "Junior",
-  difficulty = "Helppo",
+  difficulty = "Easy",
   count = 2,
 ) {
   await page.goto("./");
@@ -50,7 +50,7 @@ async function right(page: Page) {
 test("Junior easy: select theme, QR, two hints, selected answer and restore", async ({
   page,
 }) => {
-  await setup(page, "Junior", "Helppo", 3);
+  await setup(page, "Junior", "Easy", 3);
   await expect(page.locator("main")).toHaveClass(/theme-junior/);
   await expect(
     page.getByRole("heading", { name: "Your comparison track" }),
@@ -135,7 +135,7 @@ test("Junior wrong answer keeps already earned cards and reference", async ({
 test("Junior challenge: full timeline and two hints per player survive later turns", async ({
   page,
 }) => {
-  await setup(page, "Junior", "Haastava");
+  await setup(page, "Junior", "Challenge");
   expect((await state(page)).target).toBe(7);
   await expect(
     page.getByRole("button", { name: "Older", exact: true }),
@@ -171,7 +171,7 @@ test("Junior challenge: full timeline and two hints per player survive later tur
     fullPage: true,
   });
 });
-for (const difficulty of ["Helppo", "Haastava"])
+for (const difficulty of ["Easy", "Challenge"])
   test(`Junior ${difficulty}: six players play to required correct-answer winner`, async ({
     page,
   }) => {
@@ -183,7 +183,7 @@ for (const difficulty of ["Helppo", "Haastava"])
     }
     await expect(page.locator(".finish")).toContainText("WINNER");
     await expect(page.locator(".finish")).toContainText(
-      `${difficulty === "Helppo" ? 5 : 7} correct answers`,
+      `${difficulty === "Easy" ? 5 : 7} correct answers`,
     );
     await page.reload();
     await page.getByRole("button", { name: "View Last Game" }).click();
