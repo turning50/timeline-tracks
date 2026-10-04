@@ -1,0 +1,324 @@
+[
+  {
+    "id": "abba-dancing-queen",
+    "artist": "ABBA",
+    "title": "Dancing Queen",
+    "year": 1976,
+    "spotifyUrl": "https://open.spotify.com/track/01iyCAUm8EvOFqVWYJ3dVX"
+  },
+  {
+    "id": "aha-take-on-me",
+    "artist": "a-ha",
+    "title": "Take on Me (1985 single mix)",
+    "year": 1985,
+    "spotifyUrl": "https://open.spotify.com/track/4BYvBCfAWfFs71AWcbsZRG"
+  },
+  {
+    "id": "oasis-wonderwall",
+    "artist": "Oasis",
+    "title": "Wonderwall",
+    "year": 1995,
+    "spotifyUrl": "https://open.spotify.com/track/6jVEr6hDu0QPGRS3lNu9mZ"
+  },
+  {
+    "id": "adele-rolling",
+    "artist": "Adele",
+    "title": "Rolling in the Deep",
+    "year": 2010,
+    "spotifyUrl": "https://open.spotify.com/track/5xPazRvyrkVootu8pM9vUG"
+  },
+  {
+    "id": "aretha-respect",
+    "artist": "Aretha Franklin",
+    "title": "Respect",
+    "year": 1967,
+    "spotifyUrl": "https://open.spotify.com/track/46gLyFY3qZAoXpulDt6dPq"
+  },
+  {
+    "id": "backstreet-way",
+    "artist": "Backstreet Boys",
+    "title": "I Want It That Way",
+    "year": 1999,
+    "spotifyUrl": "https://open.spotify.com/track/47BBI51FKFwOMlIiX6m8ya"
+  },
+  {
+    "id": "miley-flowers",
+    "artist": "Miley Cyrus",
+    "title": "Flowers",
+    "year": 2023,
+    "spotifyUrl": "https://open.spotify.com/track/7DSAEUvxU8FajXtRloy8M0"
+  },
+  {
+    "id": "stevie-superstition",
+    "artist": "Stevie Wonder",
+    "title": "Superstition",
+    "year": 1972,
+    "spotifyUrl": "https://open.spotify.com/track/1kryOQS9FQDsbYY4db5zS5"
+  },
+  {
+    "id": "ewf-september",
+    "artist": "Earth, Wind & Fire",
+    "title": "September",
+    "year": 1978,
+    "spotifyUrl": "https://open.spotify.com/track/3kXoKlD84c6OmIcOLfrfEs"
+  },
+  {
+    "id": "britney-baby",
+    "artist": "Britney Spears",
+    "title": "…Baby One More Time",
+    "year": 1998,
+    "spotifyUrl": "https://open.spotify.com/track/4dgbrI6CpyYDsOnCorGUGH"
+  },
+  {
+    "id": "rick-never",
+    "artist": "Rick Astley",
+    "title": "Never Gonna Give You Up",
+    "year": 1987,
+    "spotifyUrl": "https://open.spotify.com/track/4PTG3Z6ehGkBFwjybzWkR8"
+  },
+  {
+    "id": "cyndi-girls",
+    "artist": "Cyndi Lauper",
+    "title": "Girls Just Want to Have Fun",
+    "year": 1983,
+    "spotifyUrl": "https://open.spotify.com/track/4y1LsJpmMti1PfRQV9AWWe"
+  },
+  {
+    "id": "whitney-dance",
+    "artist": "Whitney Houston",
+    "title": "I Wanna Dance with Somebody (Who Loves Me)",
+    "year": 1987,
+    "spotifyUrl": "https://open.spotify.com/track/7xORKAbQOz84kHFPNQUDFp"
+  },
+  {
+    "id": "ben-stand",
+    "artist": "Ben E. King",
+    "title": "Stand by Me",
+    "year": 1961,
+    "spotifyUrl": "https://open.spotify.com/track/5skqFILWTTDYUoLNBb7SBj"
+  },
+  {
+    "id": "elvis-jailhouse",
+    "artist": "Elvis Presley",
+    "title": "Jailhouse Rock",
+    "year": 1957,
+    "spotifyUrl": "https://open.spotify.com/track/5T65RSByAtGjXGZ4qZP4Q2"
+  },
+  {
+    "id": "daftpunk-one-more",
+    "artist": "Daft Punk",
+    "title": "One More Time",
+    "year": 2000,
+    "spotifyUrl": "https://open.spotify.com/track/69ctcc0cmmBOrqd3HPzVyH"
+  },
+  {
+    "id": "whitestripes-seven",
+    "artist": "The White Stripes",
+    "title": "Seven Nation Army",
+    "year": 2003,
+    "spotifyUrl": "https://open.spotify.com/track/3ctoHckjyd13eBi2IDw2Ip"
+  },
+  {
+    "id": "blur-song2",
+    "artist": "Blur",
+    "title": "Song 2",
+    "year": 1997,
+    "spotifyUrl": "https://open.spotify.com/track/1FTSo4v6BOZH9QxKc3MbVM"
+  },
+  {
+    "id": "gloria-survive",
+    "artist": "Gloria Gaynor",
+    "title": "I Will Survive",
+    "year": 1978,
+    "spotifyUrl": "https://open.spotify.com/track/7cv28LXcjAC3GsXbUvXKbX"
+  },
+  {
+    "id": "frozen-let-go",
+    "artist": "Idina Menzel",
+    "title": "Let It Go",
+    "year": 2013,
+    "spotifyUrl": "https://open.spotify.com/track/0qcr5FMsEO85NAQjrlDRKo"
+  },
+  {
+    "id": "shakira-try",
+    "artist": "Shakira",
+    "title": "Try Everything",
+    "year": 2016,
+    "spotifyUrl": "https://open.spotify.com/track/6oqRo9HGck5jRuJqYIPBIJ"
+  },
+  {
+    "id": "timberlake-feeling",
+    "artist": "Justin Timberlake",
+    "title": "CAN’T STOP THE FEELING!",
+    "year": 2016,
+    "spotifyUrl": "https://open.spotify.com/track/6JV2JOEocMgcZxYSZelKcc"
+  },
+  {
+    "id": "moana-welcome",
+    "artist": "Dwayne Johnson",
+    "title": "You’re Welcome",
+    "year": 2016,
+    "spotifyUrl": "https://open.spotify.com/track/458kLXpVNXB4Jno0kKTtK2"
+  },
+  {
+    "id": "encanto-bruno",
+    "artist": "Carolina Gaitán, Mauro Castillo, Adassa, Rhenzy Feliz, Diane Guerrero & Stephanie Beatriz",
+    "title": "We Don’t Talk About Bruno",
+    "year": 2021,
+    "spotifyUrl": "https://open.spotify.com/track/52xJxFP6TqMuO4Yt0eOkMz"
+  },
+  {
+    "id": "pharrell-happy",
+    "artist": "Pharrell Williams",
+    "title": "Happy",
+    "year": 2013,
+    "spotifyUrl": "https://open.spotify.com/track/60nZcImufyMA1MKQY3dcCH"
+  },
+  {
+    "id": "taylor-shake",
+    "artist": "Taylor Swift",
+    "title": "Shake It Off",
+    "year": 2014,
+    "spotifyUrl": "https://open.spotify.com/track/0cqRj7pUJDkTCEsJkx8snD"
+  },
+  {
+    "id": "katy-roar",
+    "artist": "Katy Perry",
+    "title": "Roar",
+    "year": 2013,
+    "spotifyUrl": "https://open.spotify.com/track/27tNWlhdAryQY04Gb2ZhUI"
+  },
+  {
+    "id": "katy-firework",
+    "artist": "Katy Perry",
+    "title": "Firework",
+    "year": 2010,
+    "spotifyUrl": "https://open.spotify.com/track/3nMzQZiz8orlSV3PxYwnVP"
+  },
+  {
+    "id": "dragons-believer",
+    "artist": "Imagine Dragons",
+    "title": "Believer",
+    "year": 2017,
+    "spotifyUrl": "https://open.spotify.com/track/6Oel3GPo8dSzdnoDX0MzSW"
+  },
+  {
+    "id": "dragons-thunder",
+    "artist": "Imagine Dragons",
+    "title": "Thunder",
+    "year": 2017,
+    "spotifyUrl": "https://open.spotify.com/track/1zB4vmk8tFRmM9UULNzbLB"
+  },
+  {
+    "id": "bts-dynamite",
+    "artist": "BTS",
+    "title": "Dynamite",
+    "year": 2020,
+    "spotifyUrl": "https://open.spotify.com/track/5QDLhrAOJJdNAmCTJ8xMyW"
+  },
+  {
+    "id": "bts-butter",
+    "artist": "BTS",
+    "title": "Butter",
+    "year": 2021,
+    "spotifyUrl": "https://open.spotify.com/track/3VqeTFIvhxu3DIe4eZVzGq"
+  },
+  {
+    "id": "onedirection-beautiful",
+    "artist": "One Direction",
+    "title": "What Makes You Beautiful",
+    "year": 2011,
+    "spotifyUrl": "https://open.spotify.com/track/4cluDES4hQEUhmXj6TXkSo"
+  },
+  {
+    "id": "bruno-count",
+    "artist": "Bruno Mars",
+    "title": "Count on Me",
+    "year": 2010,
+    "spotifyUrl": "https://open.spotify.com/track/3T924DFj4oJQdUKP7CYsCH"
+  },
+  {
+    "id": "dragons-top",
+    "artist": "Imagine Dragons",
+    "title": "On Top of the World",
+    "year": 2012,
+    "spotifyUrl": "https://open.spotify.com/track/213x4gsFDm04hSqIUkg88w"
+  },
+  {
+    "id": "coldplay-sky",
+    "artist": "Coldplay",
+    "title": "A Sky Full of Stars",
+    "year": 2014,
+    "spotifyUrl": "https://open.spotify.com/track/4z3mFGACK05j0fG785TajY"
+  },
+  {
+    "id": "avicii-wake",
+    "artist": "Avicii",
+    "title": "Wake Me Up",
+    "year": 2013,
+    "spotifyUrl": "https://open.spotify.com/track/0UgLHf4WheJhiTIgixmZ01"
+  },
+  {
+    "id": "tones-dance",
+    "artist": "Tones and I",
+    "title": "Dance Monkey",
+    "year": 2019,
+    "spotifyUrl": "https://open.spotify.com/track/4AsT0m4FFfNAte32fZxXra"
+  },
+  {
+    "id": "coldplay-viva",
+    "artist": "Coldplay",
+    "title": "Viva La Vida",
+    "year": 2008,
+    "spotifyUrl": "https://open.spotify.com/track/2LnmFzNEQ2N79WVCWQzKwz"
+  },
+  {
+    "id": "onerepublic-stars",
+    "artist": "OneRepublic",
+    "title": "Counting Stars",
+    "year": 2013,
+    "spotifyUrl": "https://open.spotify.com/track/5STH9TsXknw7YiF2Cw8qDx"
+  },
+  {
+    "id": "shakira-waka",
+    "artist": "Shakira & Freshlyground",
+    "title": "Waka Waka (This Time for Africa)",
+    "year": 2010,
+    "spotifyUrl": "https://open.spotify.com/track/4aCYzKZ331yJIRqvEUtF3Q"
+  },
+  {
+    "id": "script-hall",
+    "artist": "The Script feat. will.i.am",
+    "title": "Hall of Fame",
+    "year": 2012,
+    "spotifyUrl": "https://open.spotify.com/track/48c0n7LYAiHETfDoXxVcLP"
+  },
+  {
+    "id": "showman-dreams",
+    "artist": "Ziv Zaifman, Hugh Jackman & Michelle Williams",
+    "title": "A Million Dreams",
+    "year": 2017,
+    "spotifyUrl": "https://open.spotify.com/track/11DnDeWTQuv3GIH0XHT2pl"
+  },
+  {
+    "id": "lego-awesome",
+    "artist": "Tegan and Sara feat. The Lonely Island",
+    "title": "Everything Is Awesome!!!",
+    "year": 2014,
+    "spotifyUrl": "https://open.spotify.com/track/65DU3ad0BY3N1TNn58ofmK"
+  },
+  {
+    "id": "marley-birds",
+    "artist": "Bob Marley & The Wailers",
+    "title": "Three Little Birds",
+    "year": 1977,
+    "spotifyUrl": "https://open.spotify.com/track/7vggqxNKwd6xdRoYS0pQtM"
+  },
+  {
+    "id": "mcferrin-happy",
+    "artist": "Bobby McFerrin",
+    "title": "Don’t Worry, Be Happy",
+    "year": 1988,
+    "spotifyUrl": "https://open.spotify.com/track/1ngmt8WTzBqGjsE7Ks9FMO"
+  }
+]
