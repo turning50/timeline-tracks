@@ -17,8 +17,15 @@
 
 ## Limits of validation
 
-No real iPhone or second physical scanning phone was available. Native Spotify app opening, actual audio playback, camera scanning and Safari Home Screen installation need a device check. Public Spotify pages/embed results verified the identities of the links, not availability in every region. The Pages deployment was not run: the connected GitHub capabilities cannot create a repository or change Pages settings. No repository or live Pages URL is claimed yet.
+No real iPhone or second physical scanning phone was available. Native Spotify app opening, actual audio playback, camera scanning and Safari Home Screen installation need a device check. Public Spotify pages/embed results verified the identities of the links, not availability in every region. GitHub Pages deployment succeeded. GitHub Actions repeated all checks on Ubuntu, including the normal Playwright browser install. All 28 published source files were compared by Git blob SHA against the tested local source and matched.
 
 ## Environment note
 
 The usual Playwright browser download was unavailable in this environment. Browser tests used Chromium 153 with Playwright through the optional `TT_CHROMIUM_PATH` override. CI uses the ordinary Playwright install path. No environment-specific browser package remains in project dependencies.
+
+## Published build
+
+- Repository: https://github.com/turning50/timeline-tracks
+- Live application: https://turning50.github.io/timeline-tracks/
+- First successful validation and deployment: https://github.com/turning50/timeline-tracks/actions/runs/37183740779
+- Live browser smoke check: home and player setup loaded; mystery track, QR and Spotify link rendered; placement, reveal, next turn and restore checked after publication.

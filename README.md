@@ -1,5 +1,7 @@
 # Timeline Tracks
 
+Play now: [Timeline Tracks](https://turning50.github.io/timeline-tracks/) · [GitHub repository](https://github.com/turning50/timeline-tracks)
+
 A mobile-first music timeline party game for 2–6 people, built with React, TypeScript and Vite. No backend, database, paid service, or game account is required.
 
 ## Play
@@ -67,7 +69,9 @@ Keep IDs stable: saved games reference them. Removing or renaming a song used by
 
 This project is configured for the repository **timeline-tracks** at:
 
-`https://<your-github-username>.github.io/timeline-tracks/`
+[https://turning50.github.io/timeline-tracks/](https://turning50.github.io/timeline-tracks/)
+
+Pages is enabled with GitHub Actions in this repository. Every push to `main` validates the project and publishes a new build. The steps below describe setup for a fresh copy.
 
 1. Create a public repository named `timeline-tracks` under your chosen account.
 2. Push this project and its commit history to its `main` branch.
