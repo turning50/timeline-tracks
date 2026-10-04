@@ -79,6 +79,10 @@ test("mobile: start, hide answer, QR, link, placement, reveal, next and restore"
   });
 });
 test("wrong placement and rotation", async ({ page }) => {
+  // This case needs different years; equal years correctly accept both gaps.
+  await page.addInitScript(() => {
+    Math.random = () => 0.5;
+  });
   await start(page);
   const right = await correctGap(page);
   await page
