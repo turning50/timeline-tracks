@@ -147,7 +147,7 @@ export default function App() {
         <div className="mode-badge">
           {modeInfo.name}
           {activeMode === "junior"
-            ? ` · ${screen === "game" && game ? (isEasy(game) ? "Helppo" : "Haastava") : difficulty === "easy" ? "Helppo" : "Haastava"}`
+            ? ` · ${screen === "game" && game ? (isEasy(game) ? "Easy" : "Challenge") : difficulty === "easy" ? "Easy" : "Challenge"}`
             : ""}
         </div>
       )}
@@ -197,7 +197,7 @@ export default function App() {
               <p className="save-label">
                 Saved: {modes[gameMode(game)].name}
                 {gameMode(game) === "junior"
-                  ? ` · ${isEasy(game) ? "Helppo" : "Haastava"}`
+                  ? ` · ${isEasy(game) ? "Easy" : "Challenge"}`
                   : ""}
               </p>
             )}
@@ -218,7 +218,7 @@ export default function App() {
               <li>Keep the Spotify screen away from the person guessing.</li>
               <li>
                 {mode === "junior"
-                  ? "Helppo: choose older or newer than your comparison card. Haastava: choose a gap on your full timeline."
+                  ? "Easy: choose older or newer than your comparison card. Challenge: choose a gap on your full timeline."
                   : "Choose a gap on your timeline, then lock your answer."}
               </li>
               <li>
@@ -227,7 +227,7 @@ export default function App() {
               </li>
               <li>
                 {mode === "junior"
-                  ? "Helppo: 5 correct answers, with two optional clues per track. Haastava: 7 correct answers, with two hints per player for the whole game. The starter does not count."
+                  ? "Easy: 5 correct answers, with two optional clues per track. Challenge: 7 correct answers, with two hints per player for the whole game. The starter does not count."
                   : "Your starting card counts toward the target."}
               </li>
             </ol>
@@ -289,14 +289,14 @@ export default function App() {
                   aria-pressed={difficulty === "easy"}
                   onClick={() => setDifficulty("easy")}
                 >
-                  <strong>Helppo</strong>
+                  <strong>Easy</strong>
                   <span>Older or newer · 5 correct</span>
                 </button>
                 <button
                   aria-pressed={difficulty === "challenge"}
                   onClick={() => setDifficulty("challenge")}
                 >
-                  <strong>Haastava</strong>
+                  <strong>Challenge</strong>
                   <span>Full timeline · 7 correct</span>
                 </button>
               </div>
