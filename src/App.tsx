@@ -1,8 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import { QRCodeSVG } from "qrcode.react";
 import data from "./data/songs.json";
+import juniorData from "./data/junior-songs.json";
 import {
   createGame,
+  gameMode,
+  isEasy,
+  score,
+  spendHint,
+  hintText,
+  type GameMode,
+  type Difficulty,
   lockAnswer,
   nextTurn,
   restoreGame,
@@ -11,10 +19,32 @@ import {
   type Song,
 } from "./game/engine";
 const songs: Song[] = data;
-const catalog = new Map(songs.map((s) => [s.id, s]));
+const juniorSongs: Song[] = juniorData;
+const allSongs: Song[] = [
+  ...new Map([...songs, ...juniorSongs].map((s) => [s.id, s])).values(),
+];
+const modes = {
+  classic: {
+    name: "Klassikko",
+    description: "The original game. All decades, your full timeline.",
+    eyebrow: "A GOOD NIGHT, OUT OF ORDER",
+  },
+  junior: {
+    name: "Junior",
+    description:
+      "Ages 8–14. Familiar hits, helpful hints. Pick your challenge.",
+    eyebrow: "YOUR MUSIC. YOUR MOMENT.",
+  },
+  family: {
+    name: "Perhe",
+    description: "Classic rules, a family song pack. Make a timeline together.",
+    eyebrow: "GOOD MUSIC. GREAT COMPANY.",
+  },
+};
+const catalog = new Map(allSongs.map((s) => [s.id, s]));
 function load() {
   try {
-    return restoreGame(localStorage.getItem(STORAGE_KEY), songs);
+    return restoreGame(localStorage.getItem(STORAGE_KEY), allSongs);
   } catch {
     return null;
   }
@@ -33,6 +63,8 @@ function Card({ id, highlight = false }: { id: string; highlight?: boolean }) {
 }
 export default function App() {
   const [game, setGame] = useState<Game | null>(load);
+  const [mode, setMode] = useState<GameMode>("classic");
+  const [difficulty, setDifficulty] = useState<Difficulty>("easy");
   const [screen, setScreen] = useState<"home" | "setup" | "game">("home");
   const [count, setCount] = useState(2);
   const [names, setNames] = useState(
@@ -69,18 +101,33 @@ export default function App() {
     else setScreen("setup");
   }
   function start() {
-    setGame(createGame(names.slice(0, count), target, songs));
+    setGame(
+      createGame(
+        names.slice(0, count),
+        target,
+        mode === "classic" ? songs : juniorSongs,
+        Math.random,
+        { mode, difficulty },
+      ),
+    );
     setScreen("game");
     setQr(false);
   }
   const player = game?.players[game.currentPlayer];
   const mystery = game?.mystery ? catalog.get(game.mystery) : null;
+  const activeMode = screen === "game" && game ? gameMode(game) : mode;
+  const modeInfo = modes[activeMode];
+  const easy = game ? isEasy(game) : false;
+  const junior = game ? gameMode(game) === "junior" : false;
   return (
-    <main className="app">
+    <main className={`app theme-${activeMode}`}>
       <header>
         <button
           className="brand"
           onClick={() => {
+            setMode(activeMode);
+            if (activeMode === "junior" && game?.difficulty)
+              setDifficulty(game.difficulty);
             setScreen("home");
             setQr(false);
           }}
@@ -96,9 +143,17 @@ export default function App() {
           {notice}
         </p>
       )}
+      {screen !== "home" && (
+        <div className="mode-badge">
+          {modeInfo.name}
+          {activeMode === "junior"
+            ? ` · ${screen === "game" && game ? (isEasy(game) ? "Helppo" : "Haastava") : difficulty === "easy" ? "Helppo" : "Haastava"}`
+            : ""}
+        </div>
+      )}
       {screen === "home" && (
         <section className="home">
-          <div className="eyebrow">A GOOD NIGHT, OUT OF ORDER</div>
+          <div className="eyebrow">{modeInfo.eyebrow}</div>
           <h1>
             Know the song.
             <br />
@@ -113,6 +168,23 @@ export default function App() {
             <div className="unknown">?</div>
             <div>2003</div>
           </div>
+          <fieldset className="mode-picker">
+            <legend>Choose your game</legend>
+            <div className="mode-options">
+              {(["classic", "junior", "family"] as const).map((m) => (
+                <button
+                  key={m}
+                  className={`mode-option mode-${m}`}
+                  aria-pressed={mode === m}
+                  onClick={() => setMode(m)}
+                >
+                  <span className="mode-dot" aria-hidden="true" />
+                  <strong>{modes[m].name}</strong>
+                  <span>{modes[m].description}</span>
+                </button>
+              ))}
+            </div>
+          </fieldset>
           <div className="home-actions">
             {game && (
               <button className="primary" onClick={() => setScreen("game")}>
@@ -120,6 +192,14 @@ export default function App() {
                   ? "View Last Game"
                   : "Continue Game"}
               </button>
+            )}
+            {game && (
+              <p className="save-label">
+                Saved: {modes[gameMode(game)].name}
+                {gameMode(game) === "junior"
+                  ? ` · ${isEasy(game) ? "Helppo" : "Haastava"}`
+                  : ""}
+              </p>
             )}
             <button className={game ? "secondary" : "primary"} onClick={setup}>
               New Game
@@ -136,17 +216,26 @@ export default function App() {
               <li>Each player starts with one revealed track.</li>
               <li>Scan the mystery QR with a second phone, or open Spotify.</li>
               <li>Keep the Spotify screen away from the person guessing.</li>
-              <li>Choose a gap on your timeline, then lock your answer.</li>
               <li>
-                Correct tracks stay. Equal years count as correct on either
-                side.
+                {mode === "junior"
+                  ? "Helppo: choose older or newer than your comparison card. Haastava: choose a gap on your full timeline."
+                  : "Choose a gap on your timeline, then lock your answer."}
               </li>
-              <li>Your starting card counts toward the target.</li>
+              <li>
+                Correct tracks stay. Wrong answers never remove earned cards.
+                Equal years count on either side.
+              </li>
+              <li>
+                {mode === "junior"
+                  ? "Helppo: 5 correct answers, with two optional clues per track. Haastava: 7 correct answers, with two hints per player for the whole game. The starter does not count."
+                  : "Your starting card counts toward the target."}
+              </li>
             </ol>
             <p>
               Original release years are used, even when Spotify lists a later
-              reissue. This pack contains {songs.length} tracks. If it runs out,
-              the highest score wins; ties are shared.
+              reissue. This pack contains{" "}
+              {mode === "classic" ? songs.length : juniorSongs.length} tracks.
+              If it runs out, the highest score wins; ties are shared.
             </p>
             <p>
               On iPhone: Safari → Share → Add to Home Screen. Spotify listening
@@ -192,23 +281,51 @@ export default function App() {
               </label>
             ))}
           </div>
-          <fieldset>
-            <legend>Finish line</legend>
-            <div className="choices">
-              {([5, 7, 10] as const).map((n) => (
+          {mode === "junior" ? (
+            <fieldset>
+              <legend>Junior challenge</legend>
+              <div className="difficulty-choices">
                 <button
-                  key={n}
-                  aria-pressed={target === n}
-                  onClick={() => setTarget(n)}
+                  aria-pressed={difficulty === "easy"}
+                  onClick={() => setDifficulty("easy")}
                 >
-                  {n} cards
+                  <strong>Helppo</strong>
+                  <span>Older or newer · 5 correct</span>
                 </button>
-              ))}
-            </div>
-            <p className="muted">
-              Your first card counts. Seven is a good place to start.
-            </p>
-          </fieldset>
+                <button
+                  aria-pressed={difficulty === "challenge"}
+                  onClick={() => setDifficulty("challenge")}
+                >
+                  <strong>Haastava</strong>
+                  <span>Full timeline · 7 correct</span>
+                </button>
+              </div>
+              <p className="muted">
+                {difficulty === "easy"
+                  ? "Compare with your last earned card. Two optional clues per track."
+                  : "Place anywhere on your timeline. Each player has two hints for the whole game."}{" "}
+                Your starter does not count. Earned cards always stay.
+              </p>
+            </fieldset>
+          ) : (
+            <fieldset>
+              <legend>Finish line</legend>
+              <div className="choices">
+                {([5, 7, 10] as const).map((n) => (
+                  <button
+                    key={n}
+                    aria-pressed={target === n}
+                    onClick={() => setTarget(n)}
+                  >
+                    {n} cards
+                  </button>
+                ))}
+              </div>
+              <p className="muted">
+                Your first card counts. Seven is a good place to start.
+              </p>
+            </fieldset>
+          )}
           <button className="primary full" onClick={start}>
             Start Game
           </button>
@@ -221,7 +338,7 @@ export default function App() {
               <div key={i} className={i === game.currentPlayer ? "active" : ""}>
                 <span>{p.name}</span>
                 <b>
-                  {p.cards.length}
+                  {score(game, p)}
                   <small> / {game.target}</small>
                 </b>
               </div>
@@ -231,8 +348,19 @@ export default function App() {
             <section className="finish" aria-live="polite">
               <div className="eyebrow">WINNER</div>
               <h1>{player.name}</h1>
-              <p>{player.cards.length} cards. A timeline worth celebrating.</p>
-              <button className="primary" onClick={() => setScreen("setup")}>
+              <p>
+                {junior
+                  ? `${score(game, player)} correct answers. ${player.cards.length} cards including your starter.`
+                  : `${player.cards.length} cards. A timeline worth celebrating.`}
+              </p>
+              <button
+                className="primary"
+                onClick={() => {
+                  setMode(gameMode(game));
+                  if (game.difficulty) setDifficulty(game.difficulty);
+                  setScreen("setup");
+                }}
+              >
                 New Game
               </button>
               <div className="final-timeline">
@@ -248,8 +376,8 @@ export default function App() {
                 {game.players
                   .filter(
                     (p) =>
-                      p.cards.length ===
-                      Math.max(...game.players.map((p) => p.cards.length)),
+                      score(game, p) ===
+                      Math.max(...game.players.map((p) => score(game, p))),
                   )
                   .map((p) => p.name)
                   .join(" & ")}
@@ -257,7 +385,14 @@ export default function App() {
               <p>
                 No unused tracks remain. Highest score wins; ties are shared.
               </p>
-              <button className="primary" onClick={() => setScreen("setup")}>
+              <button
+                className="primary"
+                onClick={() => {
+                  setMode(gameMode(game));
+                  if (game.difficulty) setDifficulty(game.difficulty);
+                  setScreen("setup");
+                }}
+              >
                 New Game
               </button>
             </section>
@@ -280,8 +415,9 @@ export default function App() {
                     </span>
                   </h2>
                   <p>
-                    Scan or open the track and listen before placing it on your
-                    timeline.
+                    {easy
+                      ? "Listen, then decide: older or newer than your comparison track?"
+                      : "Scan or open the track and listen before placing it on your timeline."}
                   </p>
                   <div className="listen-actions">
                     <button
@@ -303,6 +439,27 @@ export default function App() {
                   <p className="small-note">
                     Keep the Spotify screen hidden from the guessing player.
                   </p>
+                  {junior && (
+                    <div className="hint-panel">
+                      <button
+                        className="secondary full"
+                        disabled={
+                          (game.hintLevel ?? 0) >= 2 ||
+                          (!easy && (player.hintsRemaining ?? 0) === 0)
+                        }
+                        onClick={() => setGame(spendHint(game))}
+                      >
+                        {easy
+                          ? `Show hint (${2 - (game.hintLevel ?? 0)} left this track)`
+                          : `Use hint (${player.hintsRemaining ?? 0} left this game)`}
+                      </button>
+                      {(game.hintLevel ?? 0) > 0 && (
+                        <p className="hint-text" role="status">
+                          {hintText(mystery.year, game.hintLevel!)}
+                        </p>
+                      )}
+                    </div>
+                  )}
                 </section>
               ) : (
                 mystery && (
@@ -319,7 +476,9 @@ export default function App() {
                     <p className="small-note">
                       {game.correct
                         ? "This track is yours."
-                        : "This track leaves the round."}
+                        : junior
+                          ? "Good try! Your earned cards stay. The next track is a fresh chance."
+                          : "This track leaves the round."}
                     </p>
                     <button
                       className="primary full"
@@ -335,51 +494,90 @@ export default function App() {
                 )
               )}
               <div className="timeline-heading">
-                <h2>Your timeline</h2>
+                <h2>
+                  {easy && game.phase === "placing"
+                    ? "Your comparison track"
+                    : "Your timeline"}
+                </h2>
                 <span>
-                  {player.cards.length} / {game.target} cards
+                  {score(game, player)} / {game.target}{" "}
+                  {junior ? "correct" : "cards"}
                 </span>
               </div>
-              <div className="timeline">
-                {Array.from({ length: player.cards.length + 1 }, (_, i) => (
-                  <div key={i}>
-                    {game.phase === "placing" && (
+              {easy && game.phase === "placing" ? (
+                <>
+                  <div className="comparison-card">
+                    <Card id={player.reference!} />
+                  </div>
+                  <div className="comparison-choices">
+                    {["Older", "Newer"].map((label, i) => (
                       <button
+                        key={label}
                         className={`slot ${game.selected === i ? "selected" : ""}`}
-                        aria-label={`Place in gap ${i + 1}`}
                         aria-pressed={game.selected === i}
                         onClick={() => setGame({ ...game, selected: i })}
                       >
-                        <span>+</span>{" "}
-                        {game.selected === i
-                          ? "Your pick"
-                          : i === 0
-                            ? "Before the first track"
-                            : i === player.cards.length
-                              ? "After the last track"
-                              : "Place here"}
+                        <span aria-hidden="true">{i === 0 ? "←" : "→"}</span>
+                        {label}
                       </button>
-                    )}
-                    {i < player.cards.length && (
-                      <Card
-                        id={player.cards[i]}
-                        highlight={
-                          game.phase === "reveal" &&
-                          game.correct === true &&
-                          player.cards[i] === game.mystery
-                        }
-                      />
-                    )}
+                    ))}
                   </div>
-                ))}
-              </div>
+                  <p className="muted">
+                    The same year? Either answer is correct.
+                  </p>
+                  <details className="collected-cards">
+                    <summary>
+                      Your collected cards ({player.cards.length})
+                    </summary>
+                    <div className="final-timeline">
+                      {player.cards.map((id) => (
+                        <Card key={id} id={id} />
+                      ))}
+                    </div>
+                  </details>
+                </>
+              ) : (
+                <div className="timeline">
+                  {Array.from({ length: player.cards.length + 1 }, (_, i) => (
+                    <div key={i}>
+                      {game.phase === "placing" && (
+                        <button
+                          className={`slot ${game.selected === i ? "selected" : ""}`}
+                          aria-label={`Place in gap ${i + 1}`}
+                          aria-pressed={game.selected === i}
+                          onClick={() => setGame({ ...game, selected: i })}
+                        >
+                          <span>+</span>{" "}
+                          {game.selected === i
+                            ? "Your pick"
+                            : i === 0
+                              ? "Before the first track"
+                              : i === player.cards.length
+                                ? "After the last track"
+                                : "Place here"}
+                        </button>
+                      )}
+                      {i < player.cards.length && (
+                        <Card
+                          id={player.cards[i]}
+                          highlight={
+                            game.phase === "reveal" &&
+                            game.correct === true &&
+                            player.cards[i] === game.mystery
+                          }
+                        />
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
               {game.phase === "placing" && (
                 <div className="lock-bar">
                   <button
                     className="primary full"
                     disabled={game.selected === null}
                     onClick={() => {
-                      setGame(lockAnswer(game, songs));
+                      setGame(lockAnswer(game, allSongs));
                       setQr(false);
                       window.scrollTo({ top: 0, behavior: "instant" });
                     }}

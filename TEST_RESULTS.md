@@ -1,3 +1,41 @@
+# Junior / Family validation — 2026-10-04
+
+- TypeScript: passed (`npm run typecheck`).
+- ESLint: passed (`npm run lint`).
+- Unit tests: 36 passed, including all 20 original Classic checks.
+- Browser acceptance tests: 12 passed, including all five original tests.
+- Production build: passed (`npm run build`), repository base `/timeline-tracks/`.
+- Mobile viewports: 390 × 844 and 320 × 740; desktop 1280 × 900.
+
+## New coverage
+
+- Home mode selection, Junior difficulty setup, mode-specific themes and preserved Classic palette.
+- Easy older/newer comparison, sorted earned cards, correct and wrong answers; wrong answers preserve the score and comparison reference.
+- Equal years accepted in both answers/gaps for both difficulties.
+- Six-player Easy games reach five correct answers; six-player Challenge games reach seven correct answers. The starter never awards a Junior point.
+- Easy hints reset for the next track; Challenge has two hints per player for the whole game. Restoring a save never replenishes spent hints.
+- QR rendering, Spotify URL, hidden identity before reveal, selected-answer restore, reveal/winner restore and old v1 Classic saves.
+- Family uses Classic scoring with the Junior/Family pack and no hints.
+- Text and primary-button contrast >= 4.5:1 in all three home themes; mode targets >= 44 px. No horizontal overflow at 320 px.
+- Reduced-motion setting disables reveal animation. Pack has 46 unique verified-form Spotify URLs; original Classic JSON retains 37 songs.
+- Existing PWA, offline shell, rotation, wrong answers, winning, corruption handling and Pages path tests still pass.
+
+The narrow-screen preview overflow and the brief low-contrast theme-button color transition found during validation were fixed before publication. The original wrong-answer browser test now uses deterministic unequal years to avoid treating a valid equal-year guess as a failure.
+
+## Version / publication
+
+Original working main commit `a764505fa8d7f7824149c1d9bb3f4297a62fda11` is preserved as `v1.0.0`. Changes are developed in `feature/junior`. GitHub Actions validates this feature branch and pull requests; only main publishes to the existing Pages site. Actions repeats TypeScript, lint, unit tests, browser tests and production build.
+
+## Device limits
+
+No physical iPhone or second scanning phone was available. Native Spotify app opening, actual audio playback, camera scanning and Safari Home Screen installation remain physical-device checks. Public Spotify pages verified identities, not availability in every region. The Junior pack is an editorial 8–14 selection, not an official content rating; families can edit it. Ordinary Spotify links are still used without API credentials.
+
+## Environment
+
+The local Playwright download endpoint returned incomplete archives. Tests used Chromium through the existing optional `TT_CHROMIUM_PATH` setting, from a temporary reputable npm browser package outside the project. No browser package was added to project dependencies. CI uses ordinary Playwright installation.
+
+## Original release report
+
 # Validation — 2026-10-04
 
 - TypeScript: passed (`npm run typecheck`).
