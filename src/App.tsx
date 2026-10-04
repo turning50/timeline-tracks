@@ -25,7 +25,7 @@ const allSongs: Song[] = [
 ];
 const modes = {
   classic: {
-    name: "Klassikko",
+    name: "Classic",
     description: "The original game. All decades, your full timeline.",
     eyebrow: "A GOOD NIGHT, OUT OF ORDER",
   },
@@ -36,7 +36,7 @@ const modes = {
     eyebrow: "YOUR MUSIC. YOUR MOMENT.",
   },
   family: {
-    name: "Perhe",
+    name: "Family",
     description: "Classic rules, a family song pack. Make a timeline together.",
     eyebrow: "GOOD MUSIC. GREAT COMPANY.",
   },
