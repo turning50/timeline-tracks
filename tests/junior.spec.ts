@@ -192,7 +192,7 @@ for (const difficulty of ["Helppo", "Haastava"])
 test("Family warm theme, Classic preservation, legacy save and reduced motion", async ({
   page,
 }) => {
-  await setup(page, "Perhe");
+  await setup(page, "Family");
   await expect(page.locator("main")).toHaveClass(/theme-family/);
   await expect(page.getByRole("button", { name: /hint/ })).toHaveCount(0);
   await right(page);
@@ -247,7 +247,7 @@ test("All themes: readable contrast, touch targets and narrow-screen layout", as
   };
   await page.setViewportSize({ width: 320, height: 740 });
   await page.goto("./");
-  for (const name of ["Klassikko", "Junior", "Perhe"]) {
+  for (const name of ["Classic", "Junior", "Family"]) {
     await page.getByRole("button", { name: new RegExp(`^${name} `) }).click();
     const colors = await page.evaluate(() => {
       const root = getComputedStyle(document.documentElement);
