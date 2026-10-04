@@ -11,8 +11,8 @@ Choose a mode on the home screen. Every mode uses the same listening, QR, lock, 
 | Mode                          | Rules                                     | Finish                              | Hints                                    | Theme / pack                                     |
 | ----------------------------- | ----------------------------------------- | ----------------------------------- | ---------------------------------------- | ------------------------------------------------ |
 | Classic           | Place on your full timeline               | 5, 7 or 10 cards, including starter | None                                     | Original navy/gold; original 37 tracks unchanged |
-| Junior · Helppo (Easy)        | Older or newer than your last earned card | 5 correct answers, plus starter     | Two optional clues per track             | Violet/mint; 46-track Junior pack                |
-| Junior · Haastava (Challenge) | Place on your full timeline               | 7 correct answers, plus starter     | Two hints per player for the entire game | Violet/mint; 46-track Junior pack                |
+| Junior · Easy        | Older or newer than your last earned card | 5 correct answers, plus starter     | Two optional clues per track             | Violet/mint; 46-track Junior pack                |
+| Junior · Challenge | Place on your full timeline               | 7 correct answers, plus starter     | Two hints per player for the entire game | Violet/mint; 46-track Junior pack                |
 | Family                | Classic rules for mixed-age play          | 5, 7 or 10 cards, including starter | None                                     | Warm cream/terracotta; Junior/Family pack        |
 
 Wrong answers never remove earned cards. Equal years are accepted on either side in every mode. Easy mode compares against the last **correctly earned** card (initially the starter), while collected cards remain sorted; a wrong guess does not change the comparison card. Hints show the decade, then a five-year range; they never show the exact answer, artist or title. Hint budgets and the chosen answer survive reloads.
