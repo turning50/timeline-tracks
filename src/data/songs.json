@@ -1,0 +1,261 @@
+[
+  {
+    "id": "abba-dancing-queen",
+    "artist": "ABBA",
+    "title": "Dancing Queen",
+    "year": 1976,
+    "spotifyUrl": "https://open.spotify.com/track/01iyCAUm8EvOFqVWYJ3dVX"
+  },
+  {
+    "id": "mj-billie-jean",
+    "artist": "Michael Jackson",
+    "title": "Billie Jean",
+    "year": 1982,
+    "spotifyUrl": "https://open.spotify.com/track/3lwnnwoVjsmTR5CUNz1vaQ"
+  },
+  {
+    "id": "weeknd-blinding-lights",
+    "artist": "The Weeknd",
+    "title": "Blinding Lights",
+    "year": 2019,
+    "spotifyUrl": "https://open.spotify.com/track/0sf12qNH5qcw8qpgymFOqD"
+  },
+  {
+    "id": "nirvana-teen-spirit",
+    "artist": "Nirvana",
+    "title": "Smells Like Teen Spirit",
+    "year": 1991,
+    "spotifyUrl": "https://open.spotify.com/track/5ghIJDpPoe3CfHMGu71E6T"
+  },
+  {
+    "id": "aha-take-on-me",
+    "artist": "a-ha",
+    "title": "Take on Me (1985 single mix)",
+    "year": 1985,
+    "spotifyUrl": "https://open.spotify.com/track/4BYvBCfAWfFs71AWcbsZRG"
+  },
+  {
+    "id": "oasis-wonderwall",
+    "artist": "Oasis",
+    "title": "Wonderwall",
+    "year": 1995,
+    "spotifyUrl": "https://open.spotify.com/track/6jVEr6hDu0QPGRS3lNu9mZ"
+  },
+  {
+    "id": "adele-rolling",
+    "artist": "Adele",
+    "title": "Rolling in the Deep",
+    "year": 2010,
+    "spotifyUrl": "https://open.spotify.com/track/5xPazRvyrkVootu8pM9vUG"
+  },
+  {
+    "id": "aretha-respect",
+    "artist": "Aretha Franklin",
+    "title": "Respect",
+    "year": 1967,
+    "spotifyUrl": "https://open.spotify.com/track/46gLyFY3qZAoXpulDt6dPq"
+  },
+  {
+    "id": "madonna-prayer",
+    "artist": "Madonna",
+    "title": "Like a Prayer",
+    "year": 1989,
+    "spotifyUrl": "https://open.spotify.com/track/7nu8aIGZQffkko1aK5lN6h"
+  },
+  {
+    "id": "eurythmics-dreams",
+    "artist": "Eurythmics",
+    "title": "Sweet Dreams (Are Made of This)",
+    "year": 1983,
+    "spotifyUrl": "https://open.spotify.com/track/7gvSdmKrNhlareXBjNpHi3"
+  },
+  {
+    "id": "beegees-alive",
+    "artist": "Bee Gees",
+    "title": "Stayin’ Alive",
+    "year": 1977,
+    "spotifyUrl": "https://open.spotify.com/track/2xSXw1EqGSAKc1e4TPaQvV"
+  },
+  {
+    "id": "backstreet-way",
+    "artist": "Backstreet Boys",
+    "title": "I Want It That Way",
+    "year": 1999,
+    "spotifyUrl": "https://open.spotify.com/track/47BBI51FKFwOMlIiX6m8ya"
+  },
+  {
+    "id": "gnarls-crazy",
+    "artist": "Gnarls Barkley",
+    "title": "Crazy",
+    "year": 2006,
+    "spotifyUrl": "https://open.spotify.com/track/0mPG5HGpweErUzyWirSm35"
+  },
+  {
+    "id": "daftpunk-lucky",
+    "artist": "Daft Punk, Pharrell Williams & Nile Rodgers",
+    "title": "Get Lucky",
+    "year": 2013,
+    "spotifyUrl": "https://open.spotify.com/track/663EKm2UaVIpWzUIlQ8jfQ"
+  },
+  {
+    "id": "billie-bad-guy",
+    "artist": "Billie Eilish",
+    "title": "bad guy",
+    "year": 2019,
+    "spotifyUrl": "https://open.spotify.com/track/4jBq3pJy7r3jkb3Em6oFpE"
+  },
+  {
+    "id": "miley-flowers",
+    "artist": "Miley Cyrus",
+    "title": "Flowers",
+    "year": 2023,
+    "spotifyUrl": "https://open.spotify.com/track/7DSAEUvxU8FajXtRloy8M0"
+  },
+  {
+    "id": "stevie-superstition",
+    "artist": "Stevie Wonder",
+    "title": "Superstition",
+    "year": 1972,
+    "spotifyUrl": "https://open.spotify.com/track/1kryOQS9FQDsbYY4db5zS5"
+  },
+  {
+    "id": "ewf-september",
+    "artist": "Earth, Wind & Fire",
+    "title": "September",
+    "year": 1978,
+    "spotifyUrl": "https://open.spotify.com/track/3kXoKlD84c6OmIcOLfrfEs"
+  },
+  {
+    "id": "ronson-uptown",
+    "artist": "Mark Ronson feat. Bruno Mars",
+    "title": "Uptown Funk",
+    "year": 2014,
+    "spotifyUrl": "https://open.spotify.com/track/4rmPQGwcLQjCoFq5NrTA0D"
+  },
+  {
+    "id": "britney-baby",
+    "artist": "Britney Spears",
+    "title": "…Baby One More Time",
+    "year": 1998,
+    "spotifyUrl": "https://open.spotify.com/track/4dgbrI6CpyYDsOnCorGUGH"
+  },
+  {
+    "id": "gnr-jungle",
+    "artist": "Guns N’ Roses",
+    "title": "Welcome to the Jungle",
+    "year": 1987,
+    "spotifyUrl": "https://open.spotify.com/track/5NIPsWpDjJTFBoPxCUUeXp"
+  },
+  {
+    "id": "queen-bohemian",
+    "artist": "Queen",
+    "title": "Bohemian Rhapsody",
+    "year": 1975,
+    "spotifyUrl": "https://open.spotify.com/track/4u7EnebtmKWzUH433cf5Qv"
+  },
+  {
+    "id": "bowie-heroes",
+    "artist": "David Bowie",
+    "title": "Heroes",
+    "year": 1977,
+    "spotifyUrl": "https://open.spotify.com/track/7Jh1bpe76CNTCgdgAdBw4Z"
+  },
+  {
+    "id": "rick-never",
+    "artist": "Rick Astley",
+    "title": "Never Gonna Give You Up",
+    "year": 1987,
+    "spotifyUrl": "https://open.spotify.com/track/4PTG3Z6ehGkBFwjybzWkR8"
+  },
+  {
+    "id": "cyndi-girls",
+    "artist": "Cyndi Lauper",
+    "title": "Girls Just Want to Have Fun",
+    "year": 1983,
+    "spotifyUrl": "https://open.spotify.com/track/4y1LsJpmMti1PfRQV9AWWe"
+  },
+  {
+    "id": "outkast-hey",
+    "artist": "Outkast",
+    "title": "Hey Ya!",
+    "year": 2003,
+    "spotifyUrl": "https://open.spotify.com/track/0j98HYmgXZ76SZR50yqDGD"
+  },
+  {
+    "id": "killers-brightside",
+    "artist": "The Killers",
+    "title": "Mr. Brightside",
+    "year": 2003,
+    "spotifyUrl": "https://open.spotify.com/track/0eGsygTp906u18L0Oimnem"
+  },
+  {
+    "id": "fonsi-despacito",
+    "artist": "Luis Fonsi & Daddy Yankee",
+    "title": "Despacito",
+    "year": 2017,
+    "spotifyUrl": "https://open.spotify.com/track/6habFhsOp2NvshLv26DqMb"
+  },
+  {
+    "id": "harry-as-it-was",
+    "artist": "Harry Styles",
+    "title": "As It Was",
+    "year": 2022,
+    "spotifyUrl": "https://open.spotify.com/track/4Dvkj6JhhA12EX05fT7y2e"
+  },
+  {
+    "id": "whitney-dance",
+    "artist": "Whitney Houston",
+    "title": "I Wanna Dance with Somebody (Who Loves Me)",
+    "year": 1987,
+    "spotifyUrl": "https://open.spotify.com/track/7xORKAbQOz84kHFPNQUDFp"
+  },
+  {
+    "id": "ben-stand",
+    "artist": "Ben E. King",
+    "title": "Stand by Me",
+    "year": 1961,
+    "spotifyUrl": "https://open.spotify.com/track/5skqFILWTTDYUoLNBb7SBj"
+  },
+  {
+    "id": "elvis-jailhouse",
+    "artist": "Elvis Presley",
+    "title": "Jailhouse Rock",
+    "year": 1957,
+    "spotifyUrl": "https://open.spotify.com/track/5T65RSByAtGjXGZ4qZP4Q2"
+  },
+  {
+    "id": "daftpunk-one-more",
+    "artist": "Daft Punk",
+    "title": "One More Time",
+    "year": 2000,
+    "spotifyUrl": "https://open.spotify.com/track/69ctcc0cmmBOrqd3HPzVyH"
+  },
+  {
+    "id": "whitestripes-seven",
+    "artist": "The White Stripes",
+    "title": "Seven Nation Army",
+    "year": 2003,
+    "spotifyUrl": "https://open.spotify.com/track/3ctoHckjyd13eBi2IDw2Ip"
+  },
+  {
+    "id": "blur-song2",
+    "artist": "Blur",
+    "title": "Song 2",
+    "year": 1997,
+    "spotifyUrl": "https://open.spotify.com/track/1FTSo4v6BOZH9QxKc3MbVM"
+  },
+  {
+    "id": "gloria-survive",
+    "artist": "Gloria Gaynor",
+    "title": "I Will Survive",
+    "year": 1978,
+    "spotifyUrl": "https://open.spotify.com/track/7cv28LXcjAC3GsXbUvXKbX"
+  },
+  {
+    "id": "stones-paint",
+    "artist": "The Rolling Stones",
+    "title": "Paint It, Black",
+    "year": 1966,
+    "spotifyUrl": "https://open.spotify.com/track/63T7DJ1AFDD6Bn8VzG6JE8"
+  }
+]
